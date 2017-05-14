@@ -22,5 +22,5 @@ setup(name="Everything",
       long_description=readme(),
       zip_safe=False,
 #      py_modules=['mt'], #python files as modules. still imported by this name.. 'import mt'
-      packages=['mt', ], #packages are folders. each must have __inint__.py These are imported by this name... 'import mt'
+      packages=['mt', ], #packages are folders. each must have __init__.py These are imported by this name... 'import mt'
       )
