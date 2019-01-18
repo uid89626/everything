@@ -208,3 +208,18 @@ def make_hatch():
 			this_line = get_line2p(x, y, 0.5, 0.0, x-.1, y+.1)
 			hatch.append(this_line)
 	return hatch
+
+def make_diamonds(loose=True):
+	step = 0.2 if loose else 0.1
+	diamonds = []
+	for x in np.arange(-1.0, 1.0, .1):
+		for y in np.arange(-1.0, 1.0, step):
+			this_line = get_line2p(x-.05, y, 0.5, 0.0, x, y+.1)
+			diamonds.append(this_line)
+			this_line = get_line2p(x+.05, y, 0.5, 0.0, x, y+.1)
+			diamonds.append(this_line)
+			this_line = get_line2p(x-.05, y, 0.5, 0.0, x, y-.1)
+			diamonds.append(this_line)
+			this_line = get_line2p(x+.05, y, 0.5, 0.0, x, y-.1)
+			diamonds.append(this_line)
+	return diamonds
